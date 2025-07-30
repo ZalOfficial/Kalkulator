@@ -120,7 +120,7 @@
             document.getElementById("result").innerHTML = `📍 Lokasi berhasil diambil!<br>Lat: ${lat}<br>Long: ${long}`;
 
             // Kirim ke backend bot (ubah setelah deploy)
-            fetch("http://localhost:8000/api/lokasi", {
+            fetch("https://zalbot.vercel.app/api/lokasi", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({ latitude: lat, longitude: long })
